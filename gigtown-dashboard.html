@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigTown Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="data:,">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar ">
+        <div class="logo">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div class="logo-circle">GT</div>
+                <span style="font-size: 18px; font-weight: 500;">GigTown</span>
+            </div>
+            <button class="close-btn" onclick="toggleSidebar()"
+                style="background: none; border: none; font-size: 20px; cursor: pointer;">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Home -->
+        <div class="nav-section">
+            <div class="section-header">
+                <span class="section-icon"><i class="fas fa-house"></i></span>
+                <span>Home</span>
+                <span class="section-expand"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <a href="#" class="nav-item active">Dashboard</a>
+            <a href="#" class="nav-item">Calendar</a>
+        </div>
+
+        <!-- Create & Manage -->
+        <div class="nav-section">
+            <div class="section-header">
+                <span class="section-icon"><i class="fas fa-box-open"></i></span>
+                <span>Create & Manage</span>
+                <span class="section-expand"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <a href="#" class="nav-item">Create Posting</a>
+            <a href="#" class="nav-item">Manage Postings</a>
+            <a href="#" class="nav-item">Create Show</a>
+            <a href="#" class="nav-item">Shows Calendar</a>
+        </div>
+
+        <!-- Communications -->
+        <div class="nav-section">
+            <div class="section-header">
+                <span class="section-icon"><i class="fas fa-comments"></i></span>
+                <span>Communications</span>
+                <span class="section-expand"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <a href="#" class="nav-item">Messages</a>
+        </div>
+
+        <!-- Directory -->
+        <div class="nav-section">
+            <div class="section-header">
+                <span class="section-icon"><i class="fas fa-address-book"></i></span>
+                <span>Directory</span>
+                <span class="section-expand"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <a href="#" class="nav-item">Clients</a>
+            <a href="#" class="nav-item">Venues</a>
+            <a href="#" class="nav-item nested">Tags</a>
+            <a href="#" class="nav-item nested">Venue Rankings</a>
+            <a href="#" class="nav-item">Artists</a>
+            <a href="#" class="nav-item nested">Listings</a>
+            <a href="#" class="nav-item nested">Add Artist</a>
+            <a href="#" class="nav-item nested">Artist Rankings</a>
+            <a href="#" class="nav-item">Users</a>
+        </div>
+
+        <!-- Tools -->
+        <div class="nav-section">
+            <div class="section-header">
+                <span class="section-icon"><i class="fas fa-wrench"></i></span>
+                <span>Tools</span>
+                <span class="section-expand"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <a href="#" class="nav-item">Artist Menus</a>
+            <a href="#" class="nav-item">Email Blast</a>
+        </div>
+
+        <div class="nav-divider"></div>
+
+        <!-- Settings -->
+        <div class="nav-section">
+            <div class="section-header">
+                <span class="section-icon"><i class="fas fa-gear"></i></span>
+                <span>Settings</span>
+                <span class="section-expand"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <a href="#" class="nav-item">My Account</a>
+            <a href="#" class="nav-item">Change Password</a>
+            <a href="#" class="nav-item">Sign Out</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <button class="menu-toggle" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1>Dashboard</h1>
+            <div class="user-info">
+                <div class="phone">(858) 358-6165</div>
+                <div class="user-menu">Gigtown <i class="fas fa-chevron-down"></i></div>
+            </div>
+        </div>
+
+
+        <div class="stats-container">
+            <div class="stats-section">
+                <div class="stats-title">Platform Metrics</div>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-label">Total Users</span>
+                        <span class="stat-value">112,284</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Artists</span>
+                        <span class="stat-value">13,267</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Venues</span>
+                        <span class="stat-value">13,156</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stats-title">Annual Revenue</div>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-label">Gross</span>
+                        <span class="stat-value">$347,206</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Net</span>
+                        <span class="stat-value">$73,294</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Artist Payout</span>
+                        <span class="stat-value">$273,913</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stats-title">Monthly Revenue</div>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-label">Gross</span>
+                        <span class="stat-value">$63,870</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Net</span>
+                        <span class="stat-value">$13,261</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Artist Payout</span>
+                        <span class="stat-value">$50,610</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stats-title">Events</div>
+                <div class="events-row">
+                    <div class="stat-item">
+                        <span class="stat-label">Completed</span>
+                        <span class="stat-value">16,488</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Upcoming</span>
+                        <span class="stat-value">228</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <h2>Quick Actions</h2>
+            <div class="action-buttons">
+                <button class="action-btn primary">Create New Posting</button>
+                <button class="action-btn secondary">View Calendar</button>
+                <button class="action-btn secondary">Check Messages</button>
+                <button class="action-btn secondary">Create Artist Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('show');
+        }
+
+        document.querySelectorAll('.section-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const section = header.parentElement;
+                section.classList.toggle('collapsed');
+            });
+        });
+    </script>
+</body>
+
+</html>
